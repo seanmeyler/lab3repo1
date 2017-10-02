@@ -16,7 +16,7 @@ mysql.init_app(app)
 @app.route("/")
 def hello(): # Name of the method
     cur = mysql.connection.cursor() #create a connection to the SQL instance
-    cur.execute('''SELECT * FROM entries''') # execute an SQL statment
+    cur.execute('''SELECT * FROM students''') # execute an SQL statment
     rv = cur.fetchall() #Retreive all rows returend by the SQL statment
     return str(rv)      #Return the data in a string format
 if __name__ == "__main__":
